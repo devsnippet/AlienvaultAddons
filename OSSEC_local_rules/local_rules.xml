@@ -1,0 +1,22 @@
+  <group name="windows">
+    <rule id="120001" level="0">
+      <if_sid>18105</if_sid>
+      <match>IPsec</match>
+      <description>Rule to ignore failed IPSEC negotiations. Standard in a mixed environment.</description>
+    </rule>
+    <rule id="120002" level="0">
+      <if_sid>18107</if_sid>
+      <regex>Logon Type:\D+3</regex>
+      <description>Rule to ignore network logons.</description>
+    </rule>
+    <rule id="120003" level="0">
+      <if_sid>18107</if_sid>
+      <regex>AUDIT_SUCCESS\(4769\)</regex>
+      <description>Rule to ignore network logons.</description>
+    </rule>
+    <rule id="120004" level="0">
+      <if_sid>18149</if_sid>
+      <regex>Logon Type:\D+3</regex>
+      <description>Rule to ignore network log offs.</description>
+    </rule>
+</group>
