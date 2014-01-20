@@ -19,4 +19,10 @@
       <regex>Logon Type:\D+3</regex>
       <description>Rule to ignore network log offs.</description>
     </rule>
+	<rule id="120005" level="0">
+      <if_sid>18105</if_sid>
+      <regex>AUDIT_FAILURE\(4662\)</regex>
+      <description>Unprivileged standard access attempts.</description>
+    </rule>
+    
 </group>
